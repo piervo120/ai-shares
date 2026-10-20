@@ -9,7 +9,8 @@ Ce dépôt rassemble des briques que j'utilise et que je teste pour outiller un 
 | Élément | Type | En une phrase |
 |---|---|---|
 | [`taskforce`](skills/taskforce/) | Skill | Monte une équipe d'experts virtuels qui réfléchissent en parallèle, se réunissent, et produisent un plan d'action consolidé. |
-| [`dual-review`](skills/dual-review/) | Skill | Fait relire le code par deux regards en parallèle (un « à l'aveugle » sans contexte + un contextuel), puis livre une synthèse. |
+| [`prism-review`](skills/prism-review/) | Skill | Fait relire le code par trois regards en parallèle (à l'aveugle, contextuel, et Codex nourri de la seule intention du plan), puis livre une synthèse qui explique pourquoi chaque voix a vu ce qu'elle a vu. |
+| [`dual-review`](skills/dual-review/) | Skill | Variante légère de `prism-review` : deux regards en parallèle (un « à l'aveugle » sans contexte + un contextuel), puis une synthèse. |
 | [`dev-notes-writer`](skills/dev-notes-writer/) | Agent | Rédige en fin de tâche une note de passation structurée pour le relecteur, schémas à l'appui. |
 | [`hooks/`](hooks/) | Hooks | Garde-fous côté agent : bloque les commandes destructives et protège les fichiers sensibles/générés. |
 

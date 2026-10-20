@@ -11,10 +11,14 @@ Ce dépôt rassemble des briques que j'utilise et que je teste pour outiller un 
 | [`taskforce`](skills/taskforce/) | Skill | Monte une équipe d'experts virtuels qui réfléchissent en parallèle, se réunissent, et produisent un plan d'action consolidé. |
 | [`prism-review`](skills/prism-review/) | Skill | Fait relire le code par trois regards en parallèle (à l'aveugle, contextuel, et Codex nourri de la seule intention du plan), puis livre une synthèse qui explique pourquoi chaque voix a vu ce qu'elle a vu. |
 | [`dual-review`](skills/dual-review/) | Skill | Variante légère de `prism-review` : deux regards en parallèle (un « à l'aveugle » sans contexte + un contextuel), puis une synthèse. |
+| [`open-plan-review`](skills/open-plan-review/) | Skill | Fait relire un plan d'implémentation par trois relecteurs indépendants et à l'aveugle (Claude Opus, Claude Sonnet, Codex), puis par un agent de synthèse adversarial qui apparie les convergences, challenge les constats isolés et propose des amendements. |
+| [`changelog-hebdo`](skills/changelog-hebdo/) | Skill | Produit un changelog hebdomadaire pour des décideurs non techniques : commits et docs traduits en valeur métier, preuves chiffrées traçables, registre de valeur suivi dans le temps. |
 | [`dev-notes-writer`](skills/dev-notes-writer/) | Agent | Rédige en fin de tâche une note de passation structurée pour le relecteur, schémas à l'appui. |
 | [`hooks/`](hooks/) | Hooks | Garde-fous côté agent : bloque les commandes destructives et protège les fichiers sensibles/générés. |
 
-Chaque skill a son propre `README.md` détaillé dans son dossier.
+`taskforce`, `prism-review`, `dual-review` et `dev-notes-writer` ont leur propre `README.md` détaillé dans leur dossier ; `open-plan-review` et `changelog-hebdo` se décrivent dans leur `SKILL.md`.
+
+`open-plan-review` s'appuie sur deux agents, `plan-reviewer` et `plan-synthesizer`, attendus dans `.claude/agents/` et non fournis dans ce dépôt. `prism-review` suppose Python 3 ; Codex CLI y est facultatif.
 
 ## Installation
 
